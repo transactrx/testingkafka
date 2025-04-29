@@ -1,0 +1,34 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": [
+                "kafka-cluster:Connect"
+            ],
+            "Resource": [
+                "arn:aws:kafka:us-east-1:148440604113:cluster/powerlinedevkafka/*"
+            ]
+        },
+        {
+            "Effect": "Allow",
+            "Action": [
+                "kafka-cluster:CreateTopic",
+                "kafka-cluster:WriteData"
+            ],
+            "Resource": [
+                "arn:aws:kafka:us-east-1:148440604113:topic/powerlinedevkafka/*"
+            ]
+        },
+        {
+            "Effect": "Allow",
+            "Action": [
+                "kafka-cluster:AlterGroup",
+                "kafka-cluster:DescribeGroup"
+            ],
+            "Resource": [
+                "arn:aws:kafka:us-east-1:148440604113:group/powerlinedevkafka/*"
+            ]
+        }
+    ]
+}
